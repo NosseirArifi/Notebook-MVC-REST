@@ -2,12 +2,22 @@ package com.example.demo.project;
 
 import java.io.Serializable;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
 public class Project implements Serializable{
 	
+	@NotBlank
+    @Size(min = 0, max = 5)
 	private String id;
+	@NotBlank
+    @Size(min = 10, max = 50)
 	private String description;
+	
 	private String languaje;
+	
 	private boolean open;
+	
 	public String getId() {
 		return id;
 	}

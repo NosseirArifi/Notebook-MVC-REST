@@ -2,10 +2,20 @@ package com.example.demo.user;
 
 import java.io.Serializable;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Size;
+
 public class User implements Serializable{
 	
+
+	@NotEmpty
+	@Size(min = 1, max = 5)
 	private String id;
+	@NotBlank
 	private String nick;
+	@NotEmpty
+	@Size(min = 1, max = 5)
 	private String name;
 	public String getId() {
 		return id;
